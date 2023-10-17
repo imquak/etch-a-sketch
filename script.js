@@ -20,6 +20,9 @@ document.body.onmouseup = function() {
 function addListeners(obj){
     obj.addEventListener("mouseleave", function (event) {
         isMouseHover = false
+        if (isMouseDown === true){
+            obj.style.backgroundColor = currentColor;
+        }
       }, false);
       
     obj.addEventListener("mouseover", function (event) {

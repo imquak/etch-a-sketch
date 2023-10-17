@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 body{
     background-color: rgb(53, 41, 41);
+}
+#area {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+.text{
+    font-family: 'Fugaz One', sans-serif;
+    color: white;
+    text-align: center;
+}
+.tools{
+    width: 100%;
+    margin-right: 50px;
+    flex: 1;
+}
+#tools-title{
+    display: flex;
 }
 #box{
     display: inline-flex;
@@ -8,9 +27,7 @@ body{
 .row{
     
 }
-#area {
-    display: flex;
-}
+
 
 .square{
     width: 16px;
