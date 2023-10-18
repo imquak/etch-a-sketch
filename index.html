@@ -10,7 +10,23 @@
 <body>
     <div id="area">
         <div id="tools">
-            <h3 id="tools-title" class="text">Tools</h3>
+            <h1 id="tools-title" class="text">Tools</h3>
+            <div id="options">
+                <div id="color-picker">
+                    <h2 class="text" id="color-text">Color Picker</h2>
+                    <div id="colors">
+                        <button class="color red" onclick="changeColor('red')"></button>
+                        <button class="color blue" onclick="changeColor('blue')"></button>
+                        <button class="color green" onclick="changeColor('green')"></button>
+                        <button class="color black" onclick="changeColor('black')"></button>
+                        <button class="color white" onclick="changeColor('white')"></button> 
+                    </div>
+                </div>
+                <div id="border">
+                    <h2 class="text">Change Border</h2>
+                    <button onclick="toggleBorder()">Toggle Border</button>
+                </div>
+            </div>
         </div>
         <div id="box"></div>
     </div>

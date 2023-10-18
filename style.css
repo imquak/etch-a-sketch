@@ -1,44 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 body{
-    background-color: rgb(53, 41, 41);
+    background-color: #1d2d44;
 }
 #area {
+    margin-top: 20px;
     display: flex;
     width: 100vw;
     justify-content: center;
+    gap: 35%;
 }
 .text{
-    font-family: 'Fugaz One', sans-serif;
-    color: white;
-    text-align: center;
+    font-family: Helvetica, sans-serif;
+    color: #f0ebd8;
 }
-.tools{
-    width: 100%;
-    margin-right: 50px;
-    flex: 1;
+#tools{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+    flex: 0.5;
 }
 #tools-title{
-    display: flex;
+    display: block;
+    font-weight: 800;
+    color: #0d1321;
+    padding: 10px 50px 10px 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #748cab;
+    background-color: #3e5c76;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#color-text{
+    align-self: flex-start;
+    text-align: flex-start;
 }
 #box{
+    margin-top: 100px;
     display: inline-flex;
     flex-direction: row;
+    border-width: 5px;
+    border-color:#0d1321;
+    border-style: solid;
 }
-.row{
-    
+.color{
+    width: 32px;
+    height: 32px;
 }
-
-
 .square{
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     background-color: rgb(255, 255, 255);
     border-color: rgb(54, 66, 83);
     border-width: 1px;
     border-style: solid;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;   
+    box-sizing: border-box; 
 }
-.square:hover{
-    width: 16px;
-    height: 16px;
-    background-color: rgb(36, 25, 25) !important;
+.color{
+    width: 32px;
+    height: 32px;
+    border-style: solid;
+    border-color:rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.color:active{
+    width: 32px;
+    height: 32px;
+    border-style: none;
+    border-radius: 5px;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.black{
+    background-color: black;
 }
