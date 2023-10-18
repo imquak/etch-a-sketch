@@ -3,13 +3,21 @@ console.log(box);
 
 
 
-let n = 64;
-box.style.width,box.style.height = (n * n * 1.5+"px");
+let n = 16;
 
+let currentTool = 'pencil';
 let currentColor = "Rgb(0,0,0)";
 let isBorder = true;
 let isMouseDown = false;
 let isMouseHover = false;
+let colorPicker = document.querySelector('#color-input').value;
+
+function changeTool(tool){
+    currentTool = tool;
+    if (currentTool == 'eraser'){
+        currentColor = 'white';
+    }
+}
 
 function changeColor(color){
     console.log("changed color to "+color);
@@ -28,7 +36,6 @@ function toggleBorder(){
     });
     isBorder = !isBorder;
 }
-
 document.body.onmousedown = function() { 
     isMouseDown = true;
 }
@@ -73,9 +80,7 @@ function createTiles(n){
         }
     }
     let squares = document.getElementsByClassName("square");
-    Array.from(squares).forEach( (element) => {
-        element.style.height = (n / 1.5+"px");
-        element.style.width = (n /1.5+"px");
-    } )
+    box.style.width = (n * 24+"px");
+    box.style.height = (n * 24+"px");
 }
 createTiles(n);

@@ -37,6 +37,12 @@ body{
     align-self: flex-start;
     text-align: flex-start;
 }
+#colors{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
 #box{
     margin-top: 100px;
     display: inline-flex;
@@ -59,6 +65,35 @@ body{
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box;   
     box-sizing: border-box; 
+}
+.tool{
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 3px;
+    border-color:rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.tool:active{
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+}
+.pencil{
+    background-image: url('pencil.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.eraser{
+    background-image: url('eraser.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.border{
+    background-image: url('border.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .color{
     width: 32px;
