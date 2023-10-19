@@ -52,6 +52,7 @@ body{
     border-width: 5px;
     border-color:#0d1321;
     border-style: solid;
+    user-select: none;
 }
 .color{
     width: 32px;
