@@ -1,9 +1,20 @@
 const box = document.getElementById("box");
 console.log(box);
 
+const slider = document.getElementById("size-range");
 const colorArea = document.getElementById("colors");
 
-let n = 16;
+slider.value = 16;
+let n = slider.value;
+console.log(n)
+
+slider.onchange = function (){
+    console.log(slider.value);
+    n = slider.value;
+    createTiles();
+}
+
+
 
 let currentTool = 'pencil';
 let currentColor = "Rgb(0,0,0)";
@@ -94,7 +105,8 @@ function addListeners(obj){
         }
       }, false);
 }
-function createTiles(n){
+function createTiles(){
+    box.textContent = '';
     for (let i = 0; i < n; i++){
         const row = document.createElement("div");
         row.className = "row";
@@ -102,12 +114,22 @@ function createTiles(n){
         for (let i = 0; i < n; i++){
             let square = document.createElement("div");
             square.className = "square";
+            if (n > 16){
+                square.style.width = (512/n+"px")
+                square.style.height = (512/n+"px")
+            }
             addListeners(square);
             row.appendChild(square);
         }
     }
     let squares = document.getElementsByClassName("square");
-    box.style.width = (n * 24+"px");
-    box.style.height = (n * 24+"px");
+    if (n > 16){
+        box.style.width = (n * (512/n)+"px");
+        box.style.height = (n * (512/n)+"px");
+    }
+    else{
+        box.style.width = (n * 32+"px");
+        box.style.height = (n * 32+"px");
+    }
 }
 createTiles(n);

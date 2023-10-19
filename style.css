@@ -58,8 +58,8 @@ body{
     height: 32px;
 }
 .square{
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     background-color: rgb(255, 255, 255);
     border-color: rgb(54, 66, 83);
     border-width: 1px;
@@ -95,6 +95,9 @@ body{
 }
 .savecolor{
     background-image: url('savecolor.svg');
+}
+.clear{
+    background-image: url('clear.svg');
 }
 .color{
     width: 32px;

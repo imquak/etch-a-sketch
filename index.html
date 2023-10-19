@@ -20,6 +20,7 @@
                         <button class="tool eraser" onclick="changeTool('eraser')"></button>
                         <button class="tool border" onclick="toggleBorder()"></button>
                         <button class="tool savecolor" onclick="addColor()"></button>
+                        <button class="tool clear" onclick="createTiles()"></button>
                     </div>
                 </div>
                 <div id="color-picker">
@@ -31,6 +32,10 @@
                         <button class="color green" onclick="changeColor('green')"></button>
                         <button class="color black" onclick="changeColor('black')"></button>
                     </div>
+                </div>
+                <div id="size-picker">
+                    <h2 class="text" id="color-text">Size Selector</h2>
+                    <input type="range" min="16" max="64" value="16" class="slider" id="size-range">
                 </div>
             </div>
         </div>
