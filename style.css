@@ -24,6 +24,7 @@ body{
 #tools-title{
     display: block;
     font-weight: 800;
+    font-size: 24px;
     color: #0d1321;
     padding: 10px 50px 10px 50px;
     border-width: 2px;
@@ -42,6 +43,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
+    flex-wrap: wrap;
 }
 #box{
     margin-top: 100px;
@@ -73,6 +75,8 @@ body{
     border-width: 3px;
     border-color:rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .tool:active{
     width: 40px;
@@ -82,18 +86,15 @@ body{
 }
 .pencil{
     background-image: url('pencil.svg');
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .eraser{
     background-image: url('eraser.svg');
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .border{
     background-image: url('border.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+}
+.savecolor{
+    background-image: url('savecolor.svg');
 }
 .color{
     width: 32px;

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js" defer></script>
     <script src="jscolor.js" defer></script> 
+    <script src="script.js" defer></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 <body>
     <div id="area">
         <div id="tools">
-            <h1 id="tools-title" class="text">Tools</h3>
+            <h1 id="tools-title" class="text">Etch-a-Sketch</h3>
             <div id="options">
                 <div id="tool-picker">
                     <h2 class="text" id="color-text">Tool Picker</h2>
@@ -19,12 +19,13 @@
                         <button class="tool pencil" onclick="changeTool('pencil')"></button>
                         <button class="tool eraser" onclick="changeTool('eraser')"></button>
                         <button class="tool border" onclick="toggleBorder()"></button>
+                        <button class="tool savecolor" onclick="addColor()"></button>
                     </div>
                 </div>
                 <div id="color-picker">
                     <h2 class="text" id="color-text">Color Picker</h2>
                     <div id="colors">
-                        <button class="color" id="color-input" value="Rgb(255,255,255)" data-jscolor="{preset:'dark', width:250, value:'rgb(255,255,255)'}"></button>
+                        <button class="color" id="color-input" value="Rgb(255,255,255)" data-jscolor="{preset:'dark', width:250, value:'rgb(255,255,255)', onInput: 'update(this)'}"></button>
                         <button class="color red" onclick="changeColor('red')"></button>
                         <button class="color blue" onclick="changeColor('blue')"></button>
                         <button class="color green" onclick="changeColor('green')"></button>

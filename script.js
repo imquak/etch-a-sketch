@@ -1,26 +1,53 @@
 const box = document.getElementById("box");
 console.log(box);
 
-
+const colorArea = document.getElementById("colors");
 
 let n = 16;
 
 let currentTool = 'pencil';
 let currentColor = "Rgb(0,0,0)";
+let pencilColor = currentColor;
 let isBorder = true;
 let isMouseDown = false;
 let isMouseHover = false;
-let colorPicker = document.querySelector('#color-input').value;
+let colorPicker = document.querySelector('#color-input');
+
+function addColor(){
+    let colorTool = document.createElement('button');
+    colorTool.className = "color";
+    colorTool.style.backgroundColor = currentColor;
+    colorTool.addEventListener("click", function() {
+        changeColor(colorTool.style.backgroundColor);
+    });
+    colorArea.appendChild(colorTool);
+}
+
+function update(picker) {
+    console.log(picker.toRGBString())
+    currentColor = picker.toRGBString();
+}
+
+jscolor.trigger('input');
 
 function changeTool(tool){
-    currentTool = tool;
-    if (currentTool == 'eraser'){
-        currentColor = 'white';
+    if (tool != currentTool){
+        currentTool = tool;
+        console.log(currentTool);
+        if (currentTool == 'pencil'){
+            currentColor = pencilColor;
+        }
+        else if (currentTool == 'eraser'){
+            pencilColor = currentColor;
+            currentColor = 'white';
+        }
+        console.log(currentColor)
     }
 }
 
 function changeColor(color){
     console.log("changed color to "+color);
+    changeTool('pencil');
     currentColor = color;
 }
 function toggleBorder(){
